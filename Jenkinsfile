@@ -1,4 +1,5 @@
 pipeline {
+    agent { 
     stages {
          stage('scm') {
             steps {
@@ -7,7 +8,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn --version'
             }
         }
     }
